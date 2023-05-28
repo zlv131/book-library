@@ -1,0 +1,43 @@
+.wrapper{
+  width: 280px;
+  height: 480px;
+  background: rgba(0, 0, 0, 0.03);
+  display: grid;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+
+  .content{
+    text-align: start;
+    font-size: 16px;
+    width: 180px;
+
+    .bookImg{
+      max-width: 200px;
+      height: 280px;
+      margin: 20px 0px 0px 0px;
+    }
+
+    .tag{
+      text-decoration-line: underline;
+    }
+
+    .title{
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .author{
+      //color: rgba(0, 0, 0, 0.8);
+      color: rgba(169, 171, 254, 1);
+    }
+  }
+}
+
+.wrapper:hover{
+  transform-origin: left top;
+  margin-top: -10px;
+  transition: margin-left 130ms;
+  transition: margin-top 130ms;
+  box-shadow: 0 10px 90px rgba(0, 0, 0, 0.03);
+}
