@@ -1,5 +1,21 @@
 .wrapper{
 
+  .crossVisible{
+    position: relative;
+    right: 15px;
+    bottom: -6px;
+    cursor: pointer;
+    transition: 0.1s;
+
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  .cross{
+    opacity: 0;
+  }
+
   .title{
     font-size: 40px;
     font-weight: 600;
@@ -13,7 +29,7 @@
     width: 400px;
     border-radius: 5px;
     border: 2px solid rgba(0, 0, 0, 0.5);
-
+    margin-right: -20px;
   }
 
   .sortingBlock{

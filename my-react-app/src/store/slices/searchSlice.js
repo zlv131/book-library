@@ -2,6 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
 	inputValueBook: '',
+	category: 'All',
 }
 
 const searchSlice = createSlice({
@@ -11,8 +12,12 @@ const searchSlice = createSlice({
 		setInputValueBook (state, action) {
 			state.inputValueBook = action.payload;
 		},
+		
+		setCategory (state, action) {
+			state.category = action.payload;
+		}
 	}
 })
 
-export const { setInputValueBook } = searchSlice.actions;
+export const { setInputValueBook, setCategory } = searchSlice.actions;
 export default searchSlice.reducer
