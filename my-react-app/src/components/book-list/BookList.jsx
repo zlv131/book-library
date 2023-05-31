@@ -6,9 +6,9 @@ const BookList = () => {
 	const listBooks = useSelector(state => state.bookSlice.books);
 	return (
 		<>
-			<p className={styles.title}> Найдено {listBooks.length} книг </p>
+			<p className={styles.title}> Найдено {listBooks ? listBooks.length : '0'} книг </p>
 			<div className={styles.content}>
-				{listBooks.map(book => {
+				{listBooks?.map(book => {
 					try{
 						return(
 							<BookCard
@@ -29,8 +29,8 @@ const BookList = () => {
 						/>
 					}
 				})}
-				
 			</div>
+			{!listBooks && <div className={styles.titleUnsuccessful}> Oops, try another request! </div> }
 		</>
 	);
 };
