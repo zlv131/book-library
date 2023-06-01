@@ -5,6 +5,7 @@
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 40px;
+  margin-bottom: 50px;
 }
 
 .title{
@@ -19,3 +20,24 @@
   position: relative;
   top: -100px;
 }
+
+.buttonShowMore{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  user-select: none;
+  background: #a9abfe;
+  padding: .7em 1.5em;
+  outline: none;
+  border: none;
+  margin-bottom: 25px;
+
+  &:hover{
+    background: rgba(136, 138, 235, 1);
+  }
+
+  &:active{
+   background: rgba(136, 138, 235, 1);
+  }
+}
+

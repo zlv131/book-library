@@ -4,6 +4,7 @@ const initialState = {
 	inputValueBook: '',
 	category: 'All',
 	sort: 'relevance',
+	startIndex: 1,
 }
 
 const searchSlice = createSlice({
@@ -21,8 +22,12 @@ const searchSlice = createSlice({
 		setSort (state, action) {
 			state.sort = action.payload;
 		},
+		
+		setStartIndex (state, action) {
+			state.startIndex = action.payload;
+		}
 	}
 })
 
-export const { setInputValueBook, setCategory, setSort } = searchSlice.actions;
+export const { setInputValueBook, setCategory, setSort, setStartIndex } = searchSlice.actions;
 export default searchSlice.reducer

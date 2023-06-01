@@ -4,8 +4,8 @@
   background: rgba(0, 0, 0, 0.03);
   display: grid;
   justify-content: center;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  //border-radius: 6px;
+  //border: 1px solid rgba(0, 0, 0, 0.05);
   cursor: pointer;
 
   .content{
@@ -25,7 +25,10 @@
 
     .title{
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
+      white-space: nowrap; /* Запрещаем перенос строк */
+      overflow: hidden; /* Обрезаем все, что не помещается в область */
+      text-overflow: ellipsis; /* Добавляем многоточие */
     }
 
     .author{
