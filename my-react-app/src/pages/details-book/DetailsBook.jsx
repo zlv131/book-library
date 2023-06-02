@@ -4,22 +4,24 @@ import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 const DetailsBook = () => {
 	const selectedBook = useSelector(state => state.bookSlice.selectedBook);
-	console.log(selectedBook);
+	
+	
 	useEffect(() => {
 		localStorage.setItem('selectedBook', JSON.stringify(selectedBook));
 	}, [selectedBook])
+	
 	
 	return (
 		<>
 			<div className={styles.titleHeader}> О КНИГЕ </div>
 			<div className={styles.wrapper}>
-				<img className={styles.imgBook} src={selectedBook.volumeInfo.imageLinks.thumbnail} alt=""/>
+				<img className={styles.imgBook} src={selectedBook.volumeInfo.imageLinks?.thumbnail} alt=""/>
 				<div className={styles.blockInfo}>
-					<div className={styles.category}> {selectedBook.volumeInfo.categories[0]} </div>
-					<div className={styles.title}> {selectedBook.volumeInfo.title} </div>
-					<div className={styles.author}> {selectedBook.volumeInfo.authors[0]} </div>
-					<div className={styles.publishedDate}> Дата публикации: {selectedBook.volumeInfo.publishedDate} </div>
-					<div className={styles.description}> {selectedBook.volumeInfo.description} </div>
+					<div className={styles.category}> {selectedBook.volumeInfo?.categories[0]} </div>
+					<div className={styles.title}> {selectedBook.volumeInfo?.title} </div>
+					<div className={styles.author}> {selectedBook.volumeInfo?.authors[0]} </div>
+					<div className={styles.publishedDate}> Дата публикации: {selectedBook.volumeInfo?.publishedDate} </div>
+					<div className={styles.description}> {selectedBook.volumeInfo?.description} </div>
 				</div>
 			</div>
 			<Link to="/">
